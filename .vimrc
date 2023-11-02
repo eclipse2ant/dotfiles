@@ -3,6 +3,9 @@ scriptencoding utf-8
 set fileencodings=utf-8,cp932,sjis,utf-16e
 set fileformats=unix,dos
 
+execute pathogen#infect()
+execute pathogen#helptags()
+
 syntax enable
 filetype plugin indent on
 
@@ -36,3 +39,7 @@ augroup vimrc
     autocmd!
         autocmd  FileType  vim  setlocal keywordprg=:help
 augroup END
+
+nnoremap <Leader>ev :e ~/dotfiles/.vimrc<CR>
+nnoremap <Leader>cv :e ~/dotfiles/cheatsheets/vim.txt<CR>
+
